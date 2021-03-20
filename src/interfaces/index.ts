@@ -2,16 +2,16 @@
 import { App, User } from './types'
 
 // Sequelize
-export interface IDataTypes {
-  UUID: string
-  UUIDV4(): string
-  STRING: string
-  BOOLEAN: boolean
-  TEXT: string
-  INTEGER: number
-  DATE: string
-  FLOAT: number
-}
+// export interface IDataTypes {
+//   UUID: string
+//   UUIDV4(): string
+//   STRING: string
+//   BOOLEAN: boolean
+//   TEXT: string
+//   INTEGER: number
+//   DATE: string
+//   FLOAT: number
+// }
 
 export interface IApp extends App {
   id: string
@@ -33,3 +33,6 @@ export interface IModels {
   User: any
   sequelize: any
 }
+
+export interface ICreateAppInput extends App { }
+export interface ICreateUserInput extends User { }

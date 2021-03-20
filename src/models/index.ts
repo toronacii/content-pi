@@ -1,5 +1,5 @@
 // Dependencies
-import { Sequelize } from 'sequelize'
+import { DataTypes, Sequelize } from 'sequelize'
 
 // Utils
 import { hasKey } from 'fogg-utils'
@@ -10,6 +10,9 @@ import { $db } from '../../config'
 // Interfaces
 import { IModels } from '../interfaces'
 
+import App from './App';
+import User from './User';
+
 // Db Connection
 const { dialect, port, host, database, username, password } = $db
 
@@ -18,8 +21,8 @@ const sequelize = new Sequelize(uri)
 
 // Models
 const models: IModels = {
-  App: sequelize.import('./App'),
-  User: sequelize.import('./User'),
+  App: App(sequelize),
+  User: User(sequelize),
   sequelize
 }
 

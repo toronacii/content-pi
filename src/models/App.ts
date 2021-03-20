@@ -1,13 +1,14 @@
 // Interface
-import { IApp, IDataTypes } from '../interfaces'
+import { DataTypes } from 'sequelize'
+import { IApp } from '../interfaces'
 
-export default (sequelize: any, DataTypes: IDataTypes): IApp => {
+export default (sequelize: any): IApp => {
   const App = sequelize.define('App', {
     id: {
       primaryKey: true,
       allowNull: false,
       type: DataTypes.UUID,
-      defaultValue: DataTypes.UUIDV4()
+      defaultValue: DataTypes.UUIDV4
     },
     appName: {
       type: DataTypes.STRING,

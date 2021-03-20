@@ -1,10 +1,11 @@
 // Dependencies
 import { encrypt } from 'fogg-utils'
+import { DataTypes } from 'sequelize'
 
 // Interface
-import { IUser, IModels, IDataTypes } from '../interfaces'
+import { IUser, IModels } from '../interfaces'
 
-export default (sequelize: any, DataTypes: IDataTypes): IUser => {
+export default (sequelize: any): IUser => {
   const User = sequelize.define(
     'User',
     {
@@ -12,7 +13,7 @@ export default (sequelize: any, DataTypes: IDataTypes): IUser => {
         primaryKey: true,
         allowNull: false,
         type: DataTypes.UUID,
-        defaultValue: DataTypes.UUIDV4()
+        defaultValue: DataTypes.UUIDV4
       },
       username: {
         type: DataTypes.STRING,
