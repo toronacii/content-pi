@@ -9,7 +9,7 @@
     "sourceMap": true,
     "target": "es6",
     "typeRoots": [
-      "./src/types",
+      "./src/@types",
       "./node_modules/@types"
     ]
   },
