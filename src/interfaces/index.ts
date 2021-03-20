@@ -1,5 +1,5 @@
 // Types
-import { App, User } from './types'
+import { App, Sequelize, User } from './types'
 
 // Sequelize
 // export interface IDataTypes {
@@ -13,18 +13,18 @@ import { App, User } from './types'
 //   FLOAT: number
 // }
 
-export interface IApp extends App {
+export interface IApp extends App, Sequelize {
   id: string
   createdAt: Date
   updatedAt: Date
 }
 
 // User
-export interface IUser extends User {
+export interface IUser extends User, Sequelize {
   id: string
-  token: string
-  createdAt: Date
-  updatedAt: Date
+  token?: string
+  createdAt?: Date
+  updatedAt?: Date
 }
 
 // Models
