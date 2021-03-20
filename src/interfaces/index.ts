@@ -36,3 +36,12 @@ export interface IModels {
 
 export interface ICreateAppInput extends App { }
 export interface ICreateUserInput extends User { }
+
+export interface ILoginInput {
+  email: string
+  password: string
+}
+
+export interface IAuthPayload {
+  token: string
+}
