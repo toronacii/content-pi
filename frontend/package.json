@@ -43,11 +43,12 @@
     "ts-jest": "26.1.2",
     "ts-node": "8.10.2",
     "tslint": "6.1.2",
-    "typescript": "3.9.6"
+    "typescript": "^3.8.3"
   },
   "dependencies": {
     "@zeit/next-sass": "1.0.1",
     "express": "4.17.1",
+    "fogg-ui": "^3.3.3",
     "fogg-utils": "2.3.3",
     "next": "9.4.4",
     "node-sass": "4.14.1",
